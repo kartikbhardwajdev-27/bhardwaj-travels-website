@@ -33,9 +33,9 @@ export default function EmailLayout({ children }: EmailLayoutProps) {
             Bhardwaj Travels — North India&apos;s Trusted Travel Partner
           </Text>
           <Text style={footerText}>
-            Phone: +91 98773 47600 | Email: info@bhardwajtravels.com
+            Phone: +91 98773 47600 | Email: bhardwajtravels999@gmail.com
           </Text>
-          <Text style={footerText}>[PLACEHOLDER] Office Address, New Delhi, India</Text>
+          <Text style={footerText}>[PLACEHOLDER - Update with real address]</Text>
         </Section>
       </Body>
     </Html>
