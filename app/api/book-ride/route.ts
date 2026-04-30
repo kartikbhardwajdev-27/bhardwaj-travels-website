@@ -1,10 +1,19 @@
+import { Resend } from "resend";
 import { NextResponse } from "next/server";
-import { resend, ADMIN_EMAIL, FROM_EMAIL } from "@/lib/resend";
+import { ADMIN_EMAIL, FROM_EMAIL } from "@/lib/resend";
 import { bookRideSchema } from "@/lib/schemas";
-import BookingAdminEmail from "@/components/emails/BookingAdminEmail";
-import BookingCustomerEmail from "@/components/emails/BookingCustomerEmail";
+import { bookingAdminHtml, bookingCustomerHtml } from "@/lib/email-templates";
 
 export async function POST(request: Request) {
+  if (!process.env.RESEND_API_KEY) {
+    return NextResponse.json(
+      { error: "Email service not configured" },
+      { status: 503 }
+    );
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const body = await request.json();
     const result = bookRideSchema.safeParse(body);
@@ -18,20 +27,18 @@ export async function POST(request: Request) {
 
     const data = result.data;
 
-    // Send email to admin
     await resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
       subject: `🚖 New Booking Inquiry — ${data.fullName} — ${data.tripType}`,
-      react: BookingAdminEmail({ data }),
+      html: bookingAdminHtml(data),
     });
 
-    // Send confirmation to customer
     await resend.emails.send({
       from: FROM_EMAIL,
       to: data.email,
-      subject: "We've received your booking inquiry — Bhardwaj Travels",
-      react: BookingCustomerEmail({ data }),
+      subject: "We've received your inquiry — Bhardwaj Travels",
+      html: bookingCustomerHtml(data),
     });
 
     return NextResponse.json({ success: true });
