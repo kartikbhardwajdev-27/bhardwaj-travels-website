@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(npx next:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm run:*)",
+      "Bash(ls:*)",
+      "Bash(npx tsc *)",
+      "Bash(file /Users/kartikbhardwaj/Desktop/bhardwaj-travels-website/public/images/fleet/*.jpg)",
+      "Bash(npm run *)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(kill 3299)"
+    ]
+  }
+}
