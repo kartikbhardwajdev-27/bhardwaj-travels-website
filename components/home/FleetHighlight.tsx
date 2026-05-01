@@ -10,25 +10,25 @@ const vehicles = [
   {
     type: "Sedan",
     capacity: "4 passengers",
-    image: "/images/fleet/sedan.jpg",
+    image: "/images/fleet/sedan-1.jpg",
     alt: "Sedan – Swift Dzire / Toyota Etios",
   },
   {
     type: "SUV",
     capacity: "6 passengers",
-    image: "/images/fleet/suv.jpg",
+    image: "/images/fleet/suv-1.jpg",
     alt: "SUV – Ertiga / Innova Crysta",
   },
   {
     type: "Premium",
     capacity: "4 passengers",
-    image: "/images/fleet/premium.jpg",
+    image: "/images/fleet/premium-1.jpg",
     alt: "Premium – Toyota Camry / Honda City",
   },
   {
     type: "Tempo Traveller",
     capacity: "12–16 passengers",
-    image: "/images/fleet/tempo-traveller.jpg",
+    image: "/images/fleet/tempo-1.jpg",
     alt: "Tempo Traveller – 12 to 16 seater",
   },
 ];
