@@ -6,12 +6,12 @@ import { Clock, ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 const packages = [
-  { route: "Delhi → Manali", duration: "3D / 2N" },
-  { route: "Delhi → Shimla", duration: "3D / 2N" },
-  { route: "Delhi → Agra", duration: "Day trip" },
-  { route: "Delhi → Jaipur", duration: "2D / 1N" },
-  { route: "Delhi → Rishikesh", duration: "2D / 1N" },
-  { route: "Delhi → Amritsar", duration: "3D / 2N" },
+  { route: "Chandigarh → Manali", duration: "6D / 5N" },
+  { route: "Chandigarh → Shimla", duration: "2D / 1N" },
+  { route: "Chandigarh → Amritsar", duration: "2D / 1N" },
+  { route: "Chandigarh → Jammu & Kashmir", duration: "7D / 6N" },
+  { route: "Chandigarh → Leh-Ladakh", duration: "7D / 6N" },
+  { route: "Chandigarh → Jaipur", duration: "4D / 3N" },
 ];
 
 export default function PackagesHighlight() {

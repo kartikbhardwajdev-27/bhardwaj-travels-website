@@ -29,10 +29,10 @@ const services = [
     icon: Route,
     title: "Outstation / Intercity",
     image: "/images/services/outstation.jpg",
-    alt: "Outstation intercity cab service from Delhi",
+    alt: "Outstation intercity cab service from Chandigarh",
     description: [
       "Planning a trip to another city? Our outstation service makes intercity travel comfortable and hassle-free. From one-way drops to round trips, we handle it all.",
-      "We cover all major North Indian routes — Delhi to Manali, Shimla, Jaipur, Agra, Rishikesh, Amritsar, and hundreds more. Multi-day bookings available with experienced long-distance drivers.",
+      "We cover all major North Indian routes — Chandigarh to Manali, Shimla, Jaipur, Agra, Rishikesh, Amritsar, and hundreds more. Multi-day bookings available with experienced long-distance drivers.",
       "Transparent pricing with no hidden tolls or extra charges. Your fare includes everything — just sit back and enjoy the journey.",
     ],
   },
