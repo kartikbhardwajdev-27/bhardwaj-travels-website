@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
-      subject: `🤝 New Partnership Inquiry — ${data.companyName}`,
+      subject: `🤝 New Partnership Enquiry — ${data.companyName}`,
       html: partnerAdminHtml(data),
     });
 
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Partner API error:", error);
     return NextResponse.json(
-      { success: false, error: "Failed to send inquiry. Please try again." },
+      { success: false, error: "Failed to send enquiry. Please try again." },
       { status: 500 }
     );
   }

@@ -69,7 +69,7 @@ export default function BookRideForm({ defaultVehicle }: BookRideFormProps) {
   if (submitted) {
     return (
       <FormSuccess
-        message="We've received your booking inquiry. Check your email for confirmation. We'll respond within 2 hours."
+        message="We've received your booking enquiry. Check your email for confirmation. We'll respond within 2 hours."
         onReset={() => {
           reset();
           setSubmitted(false);
@@ -191,7 +191,7 @@ export default function BookRideForm({ defaultVehicle }: BookRideFormProps) {
         loading={isSubmitting}
         className="w-full sm:w-auto"
       >
-        Send Inquiry
+        Send Enquiry
       </Button>
 
     </form>

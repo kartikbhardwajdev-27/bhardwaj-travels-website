@@ -30,14 +30,14 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: FROM_EMAIL,
       to: ADMIN_EMAIL,
-      subject: `🚖 New Booking Inquiry — ${data.fullName} — ${data.tripType}`,
+      subject: `🚖 New Booking Enquiry — ${data.fullName} — ${data.tripType}`,
       html: bookingAdminHtml(data),
     });
 
     await resend.emails.send({
       from: FROM_EMAIL,
       to: data.email,
-      subject: "We've received your inquiry — Bhardwaj Travels",
+      subject: "We've received your enquiry — Bhardwaj Travels",
       html: bookingCustomerHtml(data),
     });
 
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
   } catch (error) {
     console.error("Book ride API error:", error);
     return NextResponse.json(
-      { success: false, error: "Failed to send inquiry. Please try again." },
+      { success: false, error: "Failed to send enquiry. Please try again." },
       { status: 500 }
     );
   }

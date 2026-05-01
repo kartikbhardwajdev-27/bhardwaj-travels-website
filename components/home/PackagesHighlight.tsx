@@ -29,7 +29,7 @@ export default function PackagesHighlight() {
           </h2>
           <p className="text-muted max-w-lg mx-auto">
             Explore our most-booked routes. All packages are fully customizable
-            — just inquire and we&apos;ll plan it for you.
+            — just enquire and we&apos;ll plan it for you.
           </p>
         </motion.div>
 
@@ -52,7 +52,7 @@ export default function PackagesHighlight() {
               </div>
               <Link href="/contact">
                 <Button size="sm" variant="primary" className="w-full">
-                  Inquire now
+                  Enquire now
                 </Button>
               </Link>
             </motion.div>

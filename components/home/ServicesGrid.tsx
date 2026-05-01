@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import {
   Car,
@@ -17,35 +17,43 @@ const services = [
     icon: Car,
     title: "Local City Taxi",
     description: "Comfortable rides for all your in-city travel needs.",
+    href: "/services#local-city-taxi",
   },
   {
     icon: Route,
     title: "Outstation / Intercity",
     description: "Seamless intercity travel with experienced drivers.",
+    href: "/services#outstation-intercity",
   },
   {
     icon: Plane,
     title: "Airport Pickup & Drop",
     description: "Timely airport transfers — never miss a flight.",
+    href: "/services#airport-pickup-drop",
   },
   {
     icon: Map,
     title: "Tour Packages & Sightseeing",
     description: "Explore North India with curated tour packages.",
+    href: "/services#tour-packages-sightseeing",
   },
   {
     icon: Heart,
     title: "Wedding & Event Bookings",
     description: "Premium fleet for your special occasions.",
+    href: "/services#wedding-event-bookings",
   },
   {
     icon: Building2,
     title: "Corporate / Monthly Rentals",
     description: "Dedicated vehicles for businesses and teams.",
+    href: "/services#corporate-monthly-rentals",
   },
 ];
 
 export default function ServicesGrid() {
+  const router = useRouter();
+
   return (
     <section className="py-20 sm:py-28 bg-off-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -73,8 +81,12 @@ export default function ServicesGrid() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
             >
-              <Link
-                href="/services"
+              <a
+                href={service.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(service.href);
+                }}
                 className="group block bg-card rounded-2xl p-7 border border-soft-gray hover:border-primary hover:shadow-[0_0_30px_rgba(255,214,10,0.08)] transition-all duration-300 h-full"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
@@ -90,7 +102,7 @@ export default function ServicesGrid() {
                   Learn more
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>

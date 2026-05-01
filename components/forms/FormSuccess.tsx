@@ -12,7 +12,7 @@ interface FormSuccessProps {
 
 export default function FormSuccess({
   title = "Thank you!",
-  message = "We've received your inquiry. Check your email for confirmation.",
+  message = "We've received your enquiry. Check your email for confirmation.",
   onReset,
 }: FormSuccessProps) {
   return (
@@ -34,7 +34,7 @@ export default function FormSuccess({
       </h3>
       <p className="text-muted mb-8 max-w-sm mx-auto">{message}</p>
       <Button variant="ghost" onClick={onReset}>
-        Send another inquiry
+        Send another enquiry
       </Button>
     </motion.div>
   );

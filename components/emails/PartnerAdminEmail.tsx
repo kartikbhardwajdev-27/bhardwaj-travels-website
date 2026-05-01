@@ -9,7 +9,7 @@ interface Props {
 export default function PartnerAdminEmail({ data }: Props) {
   return (
     <EmailLayout>
-      <Text style={title}>New Partnership Inquiry</Text>
+      <Text style={title}>New Partnership Enquiry</Text>
       <Text style={subtitle}>
         A new partnership proposal has been submitted.
       </Text>

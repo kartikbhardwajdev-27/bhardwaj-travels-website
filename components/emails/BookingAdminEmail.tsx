@@ -9,7 +9,7 @@ interface Props {
 export default function BookingAdminEmail({ data }: Props) {
   return (
     <EmailLayout>
-      <Text style={title}>New Booking Inquiry</Text>
+      <Text style={title}>New Booking Enquiry</Text>
       <Text style={subtitle}>A new ride booking has been submitted.</Text>
 
       <Section style={table}>

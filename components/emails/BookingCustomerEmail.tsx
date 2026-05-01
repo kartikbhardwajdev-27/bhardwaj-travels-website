@@ -12,14 +12,14 @@ export default function BookingCustomerEmail({ data }: Props) {
       <Text style={greeting}>Hi {data.fullName},</Text>
       <Text style={body}>
         Thank you for choosing Bhardwaj Travels! We&apos;ve received your
-        booking inquiry and our team is on it.
+        booking enquiry and our team is on it.
       </Text>
       <Text style={body}>
         <strong>We&apos;ll respond within 2 hours</strong> with a confirmation
         and fare details. For urgent needs, please call us directly.
       </Text>
 
-      <Text style={sectionTitle}>Your Inquiry Summary</Text>
+      <Text style={sectionTitle}>Your Enquiry Summary</Text>
       <Section style={table}>
         <Row label="Trip Type" value={data.tripType} />
         <Row label="Pickup" value={data.pickupLocation} />

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -15,6 +16,7 @@ import Button from "@/components/ui/Button";
 
 const services = [
   {
+    id: "local-city-taxi",
     icon: Car,
     title: "Local City Taxi",
     image: "/images/services/city-taxi.jpg",
@@ -26,6 +28,7 @@ const services = [
     ],
   },
   {
+    id: "outstation-intercity",
     icon: Route,
     title: "Outstation / Intercity",
     image: "/images/services/outstation.jpg",
@@ -37,6 +40,7 @@ const services = [
     ],
   },
   {
+    id: "airport-pickup-drop",
     icon: Plane,
     title: "Airport Pickup & Drop",
     image: "/images/services/airport-transfer.jpg",
@@ -48,6 +52,7 @@ const services = [
     ],
   },
   {
+    id: "tour-packages-sightseeing",
     icon: Map,
     title: "Tour Packages & Sightseeing",
     image: "/images/services/tour-packages.jpg",
@@ -59,6 +64,7 @@ const services = [
     ],
   },
   {
+    id: "wedding-event-bookings",
     icon: Heart,
     title: "Wedding & Event Bookings",
     image: "/images/services/wedding-fleet.jpg",
@@ -70,6 +76,7 @@ const services = [
     ],
   },
   {
+    id: "corporate-monthly-rentals",
     icon: Building2,
     title: "Corporate / Monthly Rentals",
     image: "/images/services/corporate-rental.jpg",
@@ -83,6 +90,26 @@ const services = [
 ];
 
 export default function ServicesContent() {
+  useEffect(() => {
+    const scrollToSection = () => {
+      const hash = window.location.hash.slice(1);
+      if (!hash) return;
+      const el = document.getElementById(hash);
+      if (!el) return;
+      const top =
+        el.offsetTop - window.innerHeight / 2 + el.offsetHeight / 2;
+      window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    };
+
+    const timer = setTimeout(scrollToSection, 100);
+    window.addEventListener("hashchange", scrollToSection);
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener("hashchange", scrollToSection);
+    };
+  }, []);
+
   return (
     <div className="pt-32 lg:pt-40 pb-20">
       {/* Header */}
@@ -107,10 +134,11 @@ export default function ServicesContent() {
         {services.map((service, i) => (
           <motion.div
             key={service.title}
+            id={service.id}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className={`flex flex-col gap-10 items-center ${
+            className={`scroll-mt-20 flex flex-col gap-10 items-center ${
               i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
             }`}
           >

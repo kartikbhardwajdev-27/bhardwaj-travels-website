@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -18,13 +18,26 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [navVisible, setNavVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      setScrolled(currentY > 20);
+      // Always show near the top; hide on scroll-down, reveal on scroll-up.
+      // Don't hide while the mobile menu is open.
+      if (currentY < 60) {
+        setNavVisible(true);
+      } else if (!isOpen) {
+        setNavVisible(currentY < lastScrollY.current);
+      }
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isOpen]);
 
   useEffect(() => {
     setIsOpen(false);
@@ -39,7 +52,7 @@ export default function Navbar() {
         scrolled || !isHome
           ? "bg-[#0D0D0D]/90 backdrop-blur-md shadow-sm border-b border-soft-gray"
           : "bg-transparent"
-      }`}
+      } ${navVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
       <div className="max-w-7xl mx-auto pl-1 pr-4 sm:pl-2 sm:pr-6 lg:pl-4 lg:pr-8">
         <div className="flex items-center justify-between py-4 lg:py-6">

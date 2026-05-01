@@ -84,10 +84,10 @@ export function bookingAdminHtml(data: BookRideData): string {
 
   const content = `
     <h2 style="font-size:20px;font-weight:700;color:#0A0A0A;margin:0 0 6px;font-family:Arial,sans-serif;">
-      New Booking Inquiry Received
+      New Booking Enquiry Received
     </h2>
     <p style="font-size:14px;color:#5C5C56;margin:0 0 24px;font-family:Arial,sans-serif;">
-      A new ride booking inquiry has been submitted. Details below.
+      A new ride booking enquiry has been submitted. Details below.
     </p>
     <table style="width:100%;border-collapse:collapse;">
       ${tableRows(rows)}
@@ -117,7 +117,7 @@ export function bookingCustomerHtml(data: BookRideData): string {
       Thank you, ${escapeHtml(firstName)}!
     </h2>
     <p style="font-size:14px;color:#5C5C56;line-height:22px;margin:0 0 12px;font-family:Arial,sans-serif;">
-      We&apos;ve received your booking inquiry and will get back to you
+      We&apos;ve received your booking enquiry and will get back to you
       <strong style="color:#0A0A0A;">within 2 hours</strong> with a confirmation and fare details.
     </p>
     <p style="font-size:14px;color:#5C5C56;line-height:22px;margin:0 0 24px;font-family:Arial,sans-serif;">
@@ -126,7 +126,7 @@ export function bookingCustomerHtml(data: BookRideData): string {
     </p>
 
     <p style="font-size:15px;font-weight:600;color:#0A0A0A;margin:0 0 12px;font-family:Arial,sans-serif;">
-      Your Inquiry Summary
+      Your Enquiry Summary
     </p>
     <table style="width:100%;border-collapse:collapse;margin-bottom:24px;">
       ${tableRows(rows)}
@@ -153,7 +153,7 @@ export function partnerAdminHtml(data: PartnerData): string {
 
   const content = `
     <h2 style="font-size:20px;font-weight:700;color:#0A0A0A;margin:0 0 6px;font-family:Arial,sans-serif;">
-      New Partnership Inquiry Received
+      New Partnership Enquiry Received
     </h2>
     <p style="font-size:14px;color:#5C5C56;margin:0 0 24px;font-family:Arial,sans-serif;">
       A new partnership proposal has been submitted. Details below.
