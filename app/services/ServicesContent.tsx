@@ -24,7 +24,7 @@ const services = [
     alt: "Local city taxi service in Chandigarh",
     description: [
       "Reliable city rides across Chandigarh and nearby areas — errands, meetings, or a day out, we've got you covered.",
-      "Available 24/7. Hatchbacks, sedans, and SUVs — AC and non-AC options.",
+      "Comfortable rides, on-time pickups, zero hassle.",
     ],
   },
   {
@@ -90,7 +90,8 @@ const services = [
     id: "conference-cab-service",
     icon: Users,
     title: "Conference Cab Service",
-    image: "https://placehold.co/800x450/1a1a2e/ffffff?text=Conference+Cab+Service",
+    image: "/images/services/Dubai-Taxi-Company.jpeg",
+    imagePosition: "[object-position:center_60%]",
     alt: "Conference cab service for corporate events and seminars",
     description: [
       "Group transportation for conferences, seminars, and corporate events — on-time, organised, and hassle-free.",
@@ -160,7 +161,7 @@ export default function ServicesContent() {
                   src={service.image}
                   alt={service.alt}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${service.imagePosition ?? "object-center"}`}
                 />
                 <div className="absolute inset-0 bg-black/25 pointer-events-none" />
               </div>
