@@ -8,6 +8,7 @@ export const tripTypes = [
   "Tour Package / Sightseeing",
   "Wedding / Event",
   "Corporate Rental",
+  "Other",
 ] as const;
 
 export const vehicleTypes = [
@@ -25,15 +26,19 @@ export const bookRideSchema = z.object({
     .regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit Indian phone number"),
   email: z.string().email("Enter a valid email address"),
   tripType: z.enum(tripTypes, "Please select a trip type"),
-  passengers: z
-    .number({ error: "Enter number of passengers" })
-    .min(1, "At least 1 passenger")
-    .max(20, "Maximum 20 passengers"),
+  passengers: z.preprocess(
+    (v) => (typeof v === "number" && isNaN(v) ? undefined : v),
+    z
+      .number({ error: "Enter number of passengers" })
+      .min(1, "At least 1 passenger")
+      .max(20, "Maximum 20 passengers")
+      .optional()
+  ),
   vehicleType: z.enum(vehicleTypes, "Please select a vehicle type"),
-  pickupLocation: z.string().min(2, "Enter pickup location"),
+  pickupLocation: z.string().optional(),
   dropLocation: z.string().optional(),
-  travelDate: z.string().min(1, "Select a travel date"),
-  travelTime: z.string().min(1, "Select a travel time"),
+  travelDate: z.string().optional(),
+  travelTime: z.string().optional(),
   notes: z.string().optional(),
 });
 

@@ -100,7 +100,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="tel:+919877347600"
+              href="tel:+919417566648"
               className="inline-flex items-center gap-2 bg-primary text-black px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-primary-dark transition-colors"
             >
               <Phone className="w-4 h-4" />
@@ -168,7 +168,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <a
-                href="tel:+919877347600"
+                href="tel:+919417566648"
                 className="mt-4 inline-flex items-center justify-center gap-2 bg-primary text-black px-5 py-3 rounded-xl font-semibold hover:bg-primary-dark transition-colors"
               >
                 <Phone className="w-4 h-4" />

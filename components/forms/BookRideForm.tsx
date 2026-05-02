@@ -56,12 +56,12 @@ export default function BookRideForm({ defaultVehicle }: BookRideFormProps) {
         setSubmitted(true);
       } else {
         setServerError(
-          json.error || "Something went wrong. Please try calling us at +91 98773 47600."
+          json.error || "Something went wrong. Please try calling us at +91 94175 66648."
         );
       }
     } catch {
       setServerError(
-        "Something went wrong. Please try calling us at +91 98773 47600."
+        "Something went wrong. Please try calling us at +91 94175 66648."
       );
     }
   }
@@ -128,7 +128,6 @@ export default function BookRideForm({ defaultVehicle }: BookRideFormProps) {
           min={1}
           max={20}
           placeholder="e.g. 4"
-          required
           {...register("passengers", { valueAsNumber: true })}
           error={errors.passengers?.message}
         />
@@ -146,7 +145,6 @@ export default function BookRideForm({ defaultVehicle }: BookRideFormProps) {
       <Input
         label="Pickup Location"
         placeholder="e.g. Connaught Place, Delhi"
-        required
         {...register("pickupLocation")}
         error={errors.pickupLocation?.message}
       />
@@ -165,14 +163,12 @@ export default function BookRideForm({ defaultVehicle }: BookRideFormProps) {
         <Input
           label="Date of Travel"
           type="date"
-          required
           {...register("travelDate")}
           error={errors.travelDate?.message}
         />
         <Input
           label="Time"
           type="time"
-          required
           {...register("travelTime")}
           error={errors.travelTime?.message}
         />

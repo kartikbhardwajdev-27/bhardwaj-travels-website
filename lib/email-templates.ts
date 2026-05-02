@@ -30,7 +30,7 @@ function layout(content: string, footerNote: string): string {
         ${footerNote}
       </p>
       <p style="color:#888888;font-size:11px;font-family:Arial,sans-serif;margin:0;">
-        Phone: +91 98773 47600 &nbsp;|&nbsp; info@bhardwajtravels.com
+        Phone: +91 94175 66648 &nbsp;|&nbsp; bhardwajtravels999@gmail.com
       </p>
     </div>
 
@@ -121,7 +121,7 @@ export function bookingCustomerHtml(data: BookRideData): string {
       <strong style="color:#0A0A0A;">within 2 hours</strong> with a confirmation and fare details.
     </p>
     <p style="font-size:14px;color:#5C5C56;line-height:22px;margin:0 0 24px;font-family:Arial,sans-serif;">
-      For urgent queries, call us at <strong style="color:#0A0A0A;">+91 98773 47600</strong>
+      For urgent queries, call us at <strong style="color:#0A0A0A;">+91 94175 66648</strong>
       or reply to this email.
     </p>
 
@@ -184,7 +184,7 @@ export function partnerCustomerHtml(data: PartnerData): string {
     </p>
     <p style="font-size:14px;color:#5C5C56;line-height:22px;margin:0 0 24px;font-family:Arial,sans-serif;">
       In the meantime, feel free to call us at
-      <strong style="color:#0A0A0A;">+91 98773 47600</strong>
+      <strong style="color:#0A0A0A;">+91 94175 66648</strong>
       or reply to this email with any questions.
     </p>
     <p style="font-size:14px;color:#0A0A0A;line-height:22px;margin:0;font-family:Arial,sans-serif;">

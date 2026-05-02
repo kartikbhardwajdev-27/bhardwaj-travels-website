@@ -11,6 +11,7 @@ import {
   Map,
   Heart,
   Building2,
+  Users,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 
@@ -20,11 +21,10 @@ const services = [
     icon: Car,
     title: "Local City Taxi",
     image: "/images/services/city-taxi.jpg",
-    alt: "Local city taxi service in Delhi NCR",
+    alt: "Local city taxi service in Chandigarh",
     description: [
-      "Need a reliable ride within the city? Our local taxi service covers every corner of Delhi NCR and major North Indian cities. Whether it's a quick errand, a meeting across town, or a day of shopping, we've got you covered.",
-      "Our drivers know the city inside and out. They'll get you there on time, every time — taking the fastest routes while keeping you comfortable.",
-      "Available round the clock with both AC and non-AC options. Hatchbacks, sedans, and SUVs — pick what suits your ride.",
+      "Reliable city rides across Chandigarh and nearby areas — errands, meetings, or a day out, we've got you covered.",
+      "Available 24/7. Hatchbacks, sedans, and SUVs — AC and non-AC options.",
     ],
   },
   {
@@ -34,9 +34,9 @@ const services = [
     image: "/images/services/outstation.jpg",
     alt: "Outstation intercity cab service from Chandigarh",
     description: [
-      "Planning a trip to another city? Our outstation service makes intercity travel comfortable and hassle-free. From one-way drops to round trips, we handle it all.",
-      "We cover all major North Indian routes — Chandigarh to Manali, Shimla, Jaipur, Agra, Rishikesh, Amritsar, and hundreds more. Multi-day bookings available with experienced long-distance drivers.",
-      "Transparent pricing with no hidden tolls or extra charges. Your fare includes everything — just sit back and enjoy the journey.",
+      "Comfortable intercity travel — one-way or round trip, we handle it all.",
+      "Popular routes: Chandigarh to Manali, Shimla, Jaipur, Agra, Rishikesh, Amritsar, and more. Experienced long-distance drivers for multi-day trips.",
+      "Transparent pricing — no hidden tolls or extra charges.",
     ],
   },
   {
@@ -44,11 +44,11 @@ const services = [
     icon: Plane,
     title: "Airport Pickup & Drop",
     image: "/images/services/airport-transfer.jpg",
-    alt: "Airport pickup and drop service at IGI Delhi",
+    alt: "Airport pickup and drop service across North India",
     description: [
-      "Never stress about getting to the airport on time. Our airport transfer service tracks your flight status and adjusts pickup times accordingly — so you're never left waiting.",
-      "We serve all major airports in North India including IGI Delhi, Chandigarh, Jaipur, and Lucknow. Meet-and-greet service available for premium bookings.",
-      "Early morning or late night — our drivers are always on time. Flat-rate pricing with no surge charges, ever.",
+      "On-time airport transfers with real-time flight tracking — no waiting, no stress.",
+      "We serve Chandigarh International Airport and other major North India airports. Meet-and-greet available on request.",
+      "Flat-rate pricing. No surge charges, ever.",
     ],
   },
   {
@@ -58,9 +58,9 @@ const services = [
     image: "/images/services/tour-packages.jpg",
     alt: "Tour packages and sightseeing across North India",
     description: [
-      "Explore North India's most beautiful destinations with our curated tour packages. We plan the route, arrange the stays, and provide an experienced driver-guide.",
-      "Popular packages include the Golden Triangle (Delhi-Agra-Jaipur), Himachal Hill Stations, Uttarakhand Spiritual Circuit, and Punjab Heritage tours. Custom itineraries available on request.",
-      "Family trips, honeymoon packages, group tours — we tailor every package to your needs and budget. Just tell us where you want to go.",
+      "Curated North India tours — we plan the route, arrange stays, and provide an experienced driver-guide.",
+      "Popular packages: Himachal Hill Stations, Chandigarh to Manali/Shimla, Punjab Heritage, Uttarakhand Spiritual Circuit. Custom itineraries on request.",
+      "Family trips, honeymoon packages, group tours — tailored to your budget.",
     ],
   },
   {
@@ -70,9 +70,9 @@ const services = [
     image: "/images/services/wedding-fleet.jpg",
     alt: "Premium wedding fleet and event transportation service",
     description: [
-      "Make your special day even more special with our premium wedding fleet. Decorated vehicles for the baraat, luxury cars for the couple, and shuttle service for guests.",
-      "We understand that weddings require flawless coordination. Our dedicated event manager works with your wedding planner to ensure every guest reaches every venue on time.",
-      "Multi-vehicle packages available — from 5 to 50+ cars. Sedans, SUVs, luxury vehicles, and tempo travellers to accommodate every need.",
+      "Premium wedding fleet — decorated vehicles for the baraat, luxury cars for the couple, shuttle service for guests.",
+      "Packages from 5 to 50+ vehicles. Sedans, SUVs, luxury cars, and tempo travellers.",
+      "Dedicated event coordinator to ensure every guest reaches every venue on time.",
     ],
   },
   {
@@ -82,9 +82,20 @@ const services = [
     image: "/images/services/corporate-rental.jpg",
     alt: "Corporate cab and monthly car rental service for businesses",
     description: [
-      "Reliable transportation for your business. Whether you need a daily office commute vehicle, client pickup service, or a fleet for your entire team — we offer flexible corporate plans.",
-      "Monthly rental packages with dedicated drivers, fuel included. Customizable routes, timings, and vehicle types to match your company's requirements.",
-      "GST-compliant billing, professional chauffeurs, and a dedicated account manager for every corporate client. Scale up or down as needed — no long-term lock-in.",
+      "Daily office commutes, client pickups, or full fleet for your team — flexible corporate plans to suit your business.",
+      "Dedicated drivers, customizable routes and timings. GST-compliant billing with a dedicated account manager.",
+    ],
+  },
+  {
+    id: "conference-cab-service",
+    icon: Users,
+    title: "Conference Cab Service",
+    image: "https://placehold.co/800x450/1a1a2e/ffffff?text=Conference+Cab+Service",
+    alt: "Conference cab service for corporate events and seminars",
+    description: [
+      "Group transportation for conferences, seminars, and corporate events — on-time, organised, and hassle-free.",
+      "We coordinate pick-up and drop for delegates from hotels, airports, and railway stations to the venue. Fleet includes tempo travellers, SUVs, and mini-buses for any group size.",
+      "Single-point booking for the entire event. Dedicated coordinator, real-time tracking, and punctual service guaranteed.",
     ],
   },
 ];

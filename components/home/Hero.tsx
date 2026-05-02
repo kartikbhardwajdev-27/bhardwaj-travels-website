@@ -69,7 +69,7 @@ export default function Hero() {
               Book a Ride
             </Button>
           </Link>
-          <a href="tel:+919877347600">
+          <a href="tel:+919417566648">
             <Button size="lg" variant="outline">
               <Phone className="w-5 h-5" />
               Call Us Now

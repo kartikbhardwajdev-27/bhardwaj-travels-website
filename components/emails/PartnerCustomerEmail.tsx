@@ -21,7 +21,7 @@ export default function PartnerCustomerEmail({ data }: Props) {
       </Text>
       <Text style={body}>
         In the meantime, feel free to call us at{" "}
-        <strong>+91 98773 47600</strong> or reply to this email with any
+        <strong>+91 94175 66648</strong> or reply to this email with any
         questions.
       </Text>
       <Text style={signoff}>

@@ -9,14 +9,15 @@ import {
   Wrench,
   Headphones,
   ThumbsUp,
+  Heart,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 const stats = [
-  { label: "Years in Business", value: "10+" },
-  { label: "Trips Completed", value: "10,000+" },
-  { label: "Happy Customers", value: "8,000+" },
-  { label: "Cities Covered", value: "50+" },
+  { label: "Years in Business", value: "20+" },
+  { label: "Trips Completed", value: "5,00,000+" },
+  { label: "Happy Customers", value: "4,00,000+" },
+  { label: "Cities Covered", value: "1,000+" },
 ];
 
 const reasons = [
@@ -99,28 +100,54 @@ export default function AboutContent() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-6">
-              Our Story
-            </h2>
-            <div className="space-y-5 text-muted leading-relaxed">
-              <p>
-                [PLACEHOLDER] Bhardwaj Travels started with a simple idea — provide
-                reliable, honest taxi services in a market full of uncertainty. What
-                began as a small operation with just a handful of vehicles has grown
-                into one of North India&apos;s most trusted travel companies.
-              </p>
-              <p>
-                [PLACEHOLDER] Over the years, we&apos;ve expanded our fleet, our
-                routes, and our team — but our core values have stayed the same.
-                Every driver is handpicked and trained. Every vehicle is maintained
-                to the highest standards. Every customer is treated like family.
-              </p>
-              <p>
-                [PLACEHOLDER] Today, we serve thousands of customers every month —
-                from daily commuters to families on vacation, from corporate
-                executives to wedding parties. Whether it&apos;s a quick airport
-                pickup or a week-long Himalayan adventure, Bhardwaj Travels delivers
-                the same promise: comfort, reliability, and a smile.
+            {/* Accent bar + label */}
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-[3px] h-[36px] bg-primary rounded-full" />
+              <span className="text-primary text-[11px] uppercase tracking-[0.15em] font-medium">
+                Our Story
+              </span>
+            </div>
+
+            {/* Large bold intro paragraph */}
+            <p className="text-[26px] font-medium leading-[1.35] text-foreground mb-8">
+              Bhardwaj Travels started with a simple idea — provide{" "}
+              <span className="text-primary">reliable, honest</span>{" "}taxi
+              services in a market full of uncertainty. What began as a small
+              operation with just a handful of vehicles has grown into one of
+              North India&apos;s most trusted travel companies.
+            </p>
+
+            {/* Two-column grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div className="border-l-2 border-[#2a2a2a] pl-5">
+                <p className="text-[#999] text-[13px] leading-relaxed">
+                  Over the years, we&apos;ve expanded our fleet, our routes, and
+                  our team — but our core values have stayed the same.
+                </p>
+              </div>
+              <div className="border-l-2 border-[#2a2a2a] pl-5">
+                <p className="text-[#999] text-[13px] leading-relaxed">
+                  Every driver is handpicked and trained. Every vehicle is
+                  maintained to the highest standards. Every customer is treated
+                  like family.
+                </p>
+              </div>
+            </div>
+
+            {/* Highlighted card */}
+            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-[10px] px-6 py-5 flex items-start gap-4">
+              <div className="w-8 h-8 bg-[#222] rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <Heart className="w-4 h-4 text-primary" />
+              </div>
+              <p className="text-[#bbb] text-[13px] leading-relaxed">
+                Today, we serve thousands of customers every month — from daily
+                commuters to families on vacation, from corporate executives to
+                wedding parties. Whether it&apos;s a quick airport pickup or a
+                week-long Himalayan adventure, Bhardwaj Travels delivers the
+                same promise:{" "}
+                <strong className="text-white font-semibold">
+                  comfort, reliability, and a smile.
+                </strong>
               </p>
             </div>
           </motion.div>

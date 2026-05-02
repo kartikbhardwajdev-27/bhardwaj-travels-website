@@ -33,9 +33,9 @@ export default function EmailLayout({ children }: EmailLayoutProps) {
             Bhardwaj Travels — North India&apos;s Trusted Travel Partner
           </Text>
           <Text style={footerText}>
-            Phone: +91 98773 47600 | Email: bhardwajtravels999@gmail.com
+            Phone: +91 94175 66648 | Email: bhardwajtravels999@gmail.com
           </Text>
-          <Text style={footerText}>[PLACEHOLDER - Update with real address]</Text>
+          <Text style={footerText}>Victoria City, Zirakpur, Mohali, Punjab - 140603</Text>
         </Section>
       </Body>
     </Html>

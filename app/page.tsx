@@ -26,11 +26,11 @@ export default function Home() {
             description:
               "Reliable taxi and travel services across North India. Outstation, airport transfers, weddings, corporate rentals, and tour packages.",
             url: "https://bhardwajtravels.com",
-            telephone: "+919877347600",
+            telephone: "+919417566648",
             address: {
               "@type": "PostalAddress",
-              addressLocality: "New Delhi",
-              addressRegion: "Delhi",
+              addressLocality: "Zirakpur",
+              addressRegion: "Punjab",
               addressCountry: "IN",
             },
             areaServed: "North India",

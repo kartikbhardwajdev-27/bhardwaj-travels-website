@@ -35,12 +35,12 @@ export default function PartnerForm() {
         setSubmitted(true);
       } else {
         setServerError(
-          json.error || "Something went wrong. Please try calling us at +91 98773 47600."
+          json.error || "Something went wrong. Please try calling us at +91 94175 66648."
         );
       }
     } catch {
       setServerError(
-        "Something went wrong. Please try calling us at +91 98773 47600."
+        "Something went wrong. Please try calling us at +91 94175 66648."
       );
     }
   }

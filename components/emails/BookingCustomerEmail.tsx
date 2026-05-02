@@ -32,7 +32,7 @@ export default function BookingCustomerEmail({ data }: Props) {
 
       <Text style={body}>
         If you have any questions in the meantime, feel free to call us at{" "}
-        <strong>+91 98773 47600</strong> or reply to this email.
+        <strong>+91 94175 66648</strong> or reply to this email.
       </Text>
 
       <Text style={signoff}>

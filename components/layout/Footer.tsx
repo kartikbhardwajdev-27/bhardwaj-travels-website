@@ -91,26 +91,26 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+919877347600"
+                  href="tel:+919417566648"
                   className="flex items-start gap-3 text-white/60 text-sm hover:text-primary transition-colors"
                 >
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                  +91 98773 47600
+                  +91 94175 66648
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@bhardwajtravels.com"
+                  href="mailto:bhardwajtravels999@gmail.com"
                   className="flex items-start gap-3 text-white/60 text-sm hover:text-primary transition-colors"
                 >
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                  info@bhardwajtravels.com
+                  bhardwajtravels999@gmail.com
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-3 text-white/60 text-sm">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>[PLACEHOLDER] Office Address, New Delhi, India</span>
+                  <span>Victoria City, Zirakpur, Mohali, Punjab - 140603</span>
                 </div>
               </li>
             </ul>
