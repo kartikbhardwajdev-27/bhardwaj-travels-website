@@ -26,14 +26,10 @@ export const bookRideSchema = z.object({
     .regex(/^[6-9]\d{9}$/, "Enter a valid 10-digit Indian phone number"),
   email: z.string().email("Enter a valid email address"),
   tripType: z.enum(tripTypes, "Please select a trip type"),
-  passengers: z.preprocess(
-    (v) => (typeof v === "number" && isNaN(v) ? undefined : v),
-    z
-      .number({ error: "Enter number of passengers" })
-      .min(1, "At least 1 passenger")
-      .max(20, "Maximum 20 passengers")
-      .optional()
-  ),
+  passengers: z
+    .number({ error: "Enter number of passengers" })
+    .min(1, "At least 1 passenger")
+    .max(20, "Maximum 20 passengers"),
   vehicleType: z.enum(vehicleTypes, "Please select a vehicle type"),
   pickupLocation: z.string().optional(),
   dropLocation: z.string().optional(),

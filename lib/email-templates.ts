@@ -75,10 +75,10 @@ export function bookingAdminHtml(data: BookRideData): string {
     ["Type of Trip", data.tripType],
     ["Passengers", String(data.passengers)],
     ["Preferred Vehicle", data.vehicleType],
-    ["Pickup Location", data.pickupLocation],
+    ["Pickup Location", data.pickupLocation ?? ''],
     ...(data.dropLocation ? ([["Drop Location", data.dropLocation]] as Array<[string, string]>) : []),
-    ["Date of Travel", data.travelDate],
-    ["Time", data.travelTime],
+    ["Date of Travel", data.travelDate ?? ''],
+    ["Time", data.travelTime ?? ''],
     ...(data.notes ? ([["Additional Notes", data.notes]] as Array<[string, string]>) : []),
   ];
 
@@ -104,10 +104,10 @@ export function bookingCustomerHtml(data: BookRideData): string {
 
   const rows: Array<[string, string]> = [
     ["Type of Trip", data.tripType],
-    ["Pickup Location", data.pickupLocation],
+    ["Pickup Location", data.pickupLocation ?? ''],
     ...(data.dropLocation ? ([["Drop Location", data.dropLocation]] as Array<[string, string]>) : []),
-    ["Date of Travel", data.travelDate],
-    ["Time", data.travelTime],
+    ["Date of Travel", data.travelDate ?? ''],
+    ["Time", data.travelTime ?? ''],
     ["Preferred Vehicle", data.vehicleType],
     ["Passengers", String(data.passengers)],
   ];

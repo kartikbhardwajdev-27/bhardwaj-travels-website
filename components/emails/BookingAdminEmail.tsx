@@ -19,10 +19,10 @@ export default function BookingAdminEmail({ data }: Props) {
         <Row label="Trip Type" value={data.tripType} />
         <Row label="Passengers" value={String(data.passengers)} />
         <Row label="Vehicle Type" value={data.vehicleType} />
-        <Row label="Pickup" value={data.pickupLocation} />
+        <Row label="Pickup" value={data.pickupLocation ?? ''} />
         {data.dropLocation && <Row label="Drop" value={data.dropLocation} />}
-        <Row label="Date" value={data.travelDate} />
-        <Row label="Time" value={data.travelTime} />
+        <Row label="Date" value={data.travelDate ?? ''} />
+        <Row label="Time" value={data.travelTime ?? ''} />
         {data.notes && <Row label="Notes" value={data.notes} />}
       </Section>
     </EmailLayout>

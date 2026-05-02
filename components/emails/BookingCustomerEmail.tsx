@@ -22,10 +22,10 @@ export default function BookingCustomerEmail({ data }: Props) {
       <Text style={sectionTitle}>Your Enquiry Summary</Text>
       <Section style={table}>
         <Row label="Trip Type" value={data.tripType} />
-        <Row label="Pickup" value={data.pickupLocation} />
+        <Row label="Pickup" value={data.pickupLocation ?? ''} />
         {data.dropLocation && <Row label="Drop" value={data.dropLocation} />}
-        <Row label="Date" value={data.travelDate} />
-        <Row label="Time" value={data.travelTime} />
+        <Row label="Date" value={data.travelDate ?? ''} />
+        <Row label="Time" value={data.travelTime ?? ''} />
         <Row label="Vehicle" value={data.vehicleType} />
         <Row label="Passengers" value={String(data.passengers)} />
       </Section>
