@@ -11,25 +11,25 @@ const vehicles = [
     type: "Sedan",
     capacity: "4 passengers",
     image: "/images/fleet/sedan-1.jpg",
-    alt: "Sedan – Swift Dzire / Toyota Etios",
+    alt: "Sedan – Swift Dzire / Honda Amaze",
   },
   {
     type: "SUV",
     capacity: "6 passengers",
     image: "/images/fleet/suv-1.jpg",
-    alt: "SUV – Ertiga / Innova Crysta",
+    alt: "SUV – Innova Crysta, Ertiga, Kia Carens, Hycross, Rumion",
   },
   {
     type: "Premium",
     capacity: "4 passengers",
     image: "/images/fleet/premium-1.jpg",
-    alt: "Premium – Toyota Camry / Honda City",
+    alt: "Premium – Mercedes E-Class / BMW 5 Series / Audi A6",
   },
   {
     type: "Tempo Traveller",
     capacity: "12–16 passengers",
     image: "/images/fleet/tempo-1.jpg",
-    alt: "Tempo Traveller – 12 to 16 seater",
+    alt: "Tempo Traveller – Force Urban / Force Tempo Traveller",
   },
 ];
 
