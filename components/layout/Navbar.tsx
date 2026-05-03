@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -19,8 +20,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const lastScrollY = useRef(0);
   const pathname = usePathname();
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +72,7 @@ export default function Navbar() {
               priority
             />
             <span
-              className={`hidden sm:block font-display font-bold text-xl sm:text-2xl lg:text-3xl tracking-[0.15em] uppercase transition-colors ${
+              className={`hidden min-[380px]:block font-display font-bold text-xl sm:text-2xl lg:text-3xl tracking-[0.15em] uppercase transition-colors ${
                 useLightText ? "text-white" : "text-foreground"
               }`}
             >
@@ -121,77 +125,70 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 bottom-0 w-[min(288px,85vw)] shadow-2xl z-50 lg:hidden border-l border-soft-gray"
-            style={{ backgroundColor: '#171717' }}
-          >
-            <div className="flex items-center justify-between p-4 border-b border-soft-gray">
-              <div className="flex items-center gap-2.5">
-                <Image
-                  src="/logo.svg"
-                  alt="Bhardwaj Travels"
-                  width={1024}
-                  height={1024}
-                  sizes="32px"
-                  className="h-8 w-8 shrink-0"
-                />
-                <span className="font-display font-bold text-sm tracking-[0.18em] uppercase text-foreground">
-                  Bhardwaj Travels
-                </span>
-              </div>
-              <button
+      {mounted && createPortal(
+        <>
+          {/* Mobile Overlay */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 onClick={() => setIsOpen(false)}
-                className="p-2 rounded-lg hover:bg-soft-gray text-foreground"
-                aria-label="Close menu"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="flex flex-col p-4 gap-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                    pathname === link.href
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted hover:bg-soft-gray hover:text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <a
-                href="tel:+919417566648"
-                className="mt-4 inline-flex items-center justify-center gap-2 bg-primary text-black px-5 py-3 rounded-xl font-semibold hover:bg-primary-dark transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                Call Now
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                style={{ position: 'fixed', inset: 0, backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 30 }}
+              />
+            )}
+          </AnimatePresence>
 
-      {/* Mobile Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/60 z-30 lg:hidden"
-          />
-        )}
-      </AnimatePresence>
+          {/* Mobile Drawer */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, x: "100%" }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: "100%" }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                style={{ backgroundColor: '#171717', position: 'fixed', top: 0, right: 0, bottom: 0, width: 'min(288px, 85vw)', zIndex: 50, borderLeft: '1px solid #262626', boxShadow: '0 25px 50px -12px rgba(0,0,0,0.9)' }}
+              >
+                <div className="flex items-center justify-between p-4 border-b border-soft-gray" style={{ backgroundColor: '#171717' }}>
+                  <div className="flex items-center gap-2.5">
+                    <Image src="/logo.svg" alt="Bhardwaj Travels" width={1024} height={1024} sizes="32px" className="h-8 w-8 shrink-0" />
+                    <span className="font-display font-bold text-sm tracking-[0.18em] uppercase text-foreground">
+                      Bhardwaj Travels
+                    </span>
+                  </div>
+                  <button onClick={() => setIsOpen(false)} className="p-2 rounded-lg hover:bg-soft-gray text-foreground" aria-label="Close menu">
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+                <div className="flex flex-col p-4 gap-1">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
+                        pathname === link.href
+                          ? "bg-primary/10 text-primary"
+                          : "text-muted hover:bg-soft-gray hover:text-foreground"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                  <a
+                    href="tel:+919417566648"
+                    className="mt-4 inline-flex items-center justify-center gap-2 bg-primary text-black px-5 py-3 rounded-xl font-semibold hover:bg-primary-dark transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    Call Now
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </>,
+        document.body
+      )}
     </nav>
   );
 }

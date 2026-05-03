@@ -18,20 +18,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bhardwajtravels.com"),
+  metadataBase: new URL('https://bhardwajtravels.com'),
   title: {
-    default: "Bhardwaj Travels | Taxi & Travel Service — North India",
-    template: "%s — Bhardwaj Travels | Taxi & Travel North India",
+    default: 'Bhardwaj Travels – Taxi & Cab Service in North India',
+    template: '%s | Bhardwaj Travels',
   },
-  description:
-    "Reliable taxi and travel services across North India. Outstation, airport transfers, weddings, corporate rentals, and tour packages. Book your ride today!",
+  description: 'Book reliable taxi and cab services across North India. Outstation trips, airport transfers, wedding fleet, corporate rentals & tour packages from Zirakpur, Chandigarh.',
+  keywords: ['taxi service Zirakpur', 'cab service Chandigarh', 'outstation taxi North India', 'airport transfer Chandigarh', 'Bhardwaj Travels'],
+  authors: [{ name: 'Bhardwaj Travels' }],
+  creator: 'Bhardwaj Travels',
   openGraph: {
-    type: "website",
-    locale: "en_IN",
-    siteName: "Bhardwaj Travels",
+    type: 'website',
+    locale: 'en_IN',
+    url: 'https://bhardwajtravels.com',
+    siteName: 'Bhardwaj Travels',
+    title: 'Bhardwaj Travels – Taxi & Cab Service in North India',
+    description: 'Reliable taxi services across North India. Outstation, airport, weddings, corporate travel from Zirakpur & Chandigarh.',
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
+    title: 'Bhardwaj Travels – Taxi & Cab Service in North India',
+    description: 'Reliable taxi services across North India. Outstation, airport, weddings, corporate travel.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
   },
 };
 
@@ -43,6 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${bricolage.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-body">

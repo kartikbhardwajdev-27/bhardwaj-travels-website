@@ -5,6 +5,12 @@ import PackagesHighlight from "@/components/home/PackagesHighlight";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import CtaBanner from "@/components/home/CtaBanner";
 
+export const metadata = {
+  title: 'Bhardwaj Travels – Trusted Taxi Service from Zirakpur & Chandigarh',
+  description: 'Book a taxi from Zirakpur or Chandigarh for outstation trips, airport transfers, weddings, corporate travel & tour packages across North India. 24/7 service, verified drivers.',
+  alternates: { canonical: 'https://bhardwajtravels.com' },
+};
+
 export default function Home() {
   return (
     <>
