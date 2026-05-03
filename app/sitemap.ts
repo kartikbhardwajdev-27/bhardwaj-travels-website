@@ -7,5 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: 'https://www.bhardwajtravels1.com/fleet', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: 'https://www.bhardwajtravels1.com/about', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.6 },
     { url: 'https://www.bhardwajtravels1.com/contact', lastModified: new Date(), changeFrequency: 'yearly', priority: 0.7 },
+    { url: 'https://www.bhardwajtravels1.com/chandigarh-taxi', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://www.bhardwajtravels1.com/zirakpur-taxi', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://www.bhardwajtravels1.com/panchkula-taxi', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: 'https://www.bhardwajtravels1.com/mohali-taxi', lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
   ];
 }
