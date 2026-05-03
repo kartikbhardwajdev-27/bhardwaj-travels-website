@@ -3,6 +3,6 @@ import { MetadataRoute } from 'next';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/', disallow: '/api/' },
-    sitemap: 'https://bhardwajtravels.com/sitemap.xml',
+    sitemap: 'https://www.bhardwajtravels1.com/sitemap.xml',
   };
 }

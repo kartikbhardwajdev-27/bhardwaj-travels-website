@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://bhardwajtravels.com'),
+  metadataBase: new URL('https://www.bhardwajtravels1.com'),
   title: {
     default: 'Bhardwaj Travels – Taxi & Cab Service in North India',
     template: '%s | Bhardwaj Travels',
