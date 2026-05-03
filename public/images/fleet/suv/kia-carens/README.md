@@ -1,1 +1,1 @@
-# Kia Carens — drop exterior and interior photos into /photos
+# KIA Carens Clavis — drop exterior and interior photos into /photos

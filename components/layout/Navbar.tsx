@@ -54,10 +54,10 @@ export default function Navbar() {
           : "bg-transparent"
       } ${navVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <div className="max-w-7xl mx-auto pl-1 pr-4 sm:pl-2 sm:pr-6 lg:pl-4 lg:pr-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-4 lg:py-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 lg:gap-4" aria-label="Bhardwaj Travels">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 lg:gap-4" aria-label="Bhardwaj Travels">
             <Image
               src="/logo.svg"
               alt="Bhardwaj Travels"
@@ -68,7 +68,7 @@ export default function Navbar() {
               priority
             />
             <span
-              className={`hidden min-[360px]:block font-display font-bold text-xl sm:text-2xl lg:text-3xl tracking-[0.15em] uppercase transition-colors ${
+              className={`hidden sm:block font-display font-bold text-xl sm:text-2xl lg:text-3xl tracking-[0.15em] uppercase transition-colors ${
                 useLightText ? "text-white" : "text-foreground"
               }`}
             >
@@ -129,7 +129,8 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 bottom-0 w-72 bg-card shadow-2xl z-50 lg:hidden border-l border-soft-gray"
+            className="fixed top-0 right-0 bottom-0 w-[min(288px,85vw)] shadow-2xl z-50 lg:hidden border-l border-soft-gray"
+            style={{ backgroundColor: '#171717' }}
           >
             <div className="flex items-center justify-between p-4 border-b border-soft-gray">
               <div className="flex items-center gap-2.5">
@@ -187,7 +188,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/60 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/60 z-30 lg:hidden"
           />
         )}
       </AnimatePresence>

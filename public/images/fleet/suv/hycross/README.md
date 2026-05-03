@@ -1,1 +1,1 @@
-# Hycross — drop exterior and interior photos into /photos
+# Innova Hycross — drop exterior and interior photos into /photos

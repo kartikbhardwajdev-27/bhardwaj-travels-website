@@ -17,7 +17,7 @@ export default function CtaBanner() {
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-4">
             Ready to ride?
           </h2>
-          <p className="text-black/70 text-xl mb-8 max-w-2xl mx-auto whitespace-nowrap">
+          <p className="text-black/70 text-xl mb-8 max-w-2xl mx-auto">
             Book your trip in under a minute. We&apos;ll handle the rest.
           </p>
           <Link href="/contact">

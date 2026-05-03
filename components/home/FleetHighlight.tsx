@@ -17,7 +17,7 @@ const vehicles = [
     type: "SUV",
     capacity: "6 passengers",
     image: "/images/fleet/suv-1.jpg",
-    alt: "SUV – Innova Crysta, Ertiga, Kia Carens, Hycross, Rumion",
+    alt: "SUV – Innova Crysta, Ertiga, KIA Carens Clavis, Innova Hycross, Toyota Rumion",
   },
   {
     type: "Premium",
@@ -29,7 +29,7 @@ const vehicles = [
     type: "Tempo Traveller",
     capacity: "12–16 passengers",
     image: "/images/fleet/tempo-1.jpg",
-    alt: "Tempo Traveller – Force Urban / Force Tempo Traveller",
+    alt: "Tempo Traveller – Force Urbania / Force Tempo Traveller",
   },
 ];
 

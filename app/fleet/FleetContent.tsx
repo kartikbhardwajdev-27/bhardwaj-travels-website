@@ -86,30 +86,69 @@ const vehicles: Vehicle[] = [
     capacity: "6 passengers",
     bestFor: "Family trips, group travel, outstation",
     image: "/images/fleet/suv-2.jpg",
+    photos: {
+      exterior: "/images/fleet/suv/ertiga/photos/exterior.webp",
+      interior: [
+        "/images/fleet/suv/ertiga/photos/interior-1.webp",
+        "/images/fleet/suv/ertiga/photos/interior-2.webp",
+        "/images/fleet/suv/ertiga/photos/interior-3.webp",
+        "/images/fleet/suv/ertiga/photos/interior-4.webp",
+      ],
+    },
   },
   {
     category: "suv",
     categoryLabel: "SUV",
-    models: "Kia Carens",
+    models: "KIA Carens Clavis",
     capacity: "6 passengers",
     bestFor: "Family trips, group travel, outstation",
     image: "/images/fleet/suv-3.jpg",
+    photos: {
+      exterior: "/images/fleet/suv/kia-carens/photos/exterior.webp",
+      interior: [
+        "/images/fleet/suv/kia-carens/photos/interior-1.webp",
+        "/images/fleet/suv/kia-carens/photos/interior-2.webp",
+        "/images/fleet/suv/kia-carens/photos/interior-3.webp",
+        "/images/fleet/suv/kia-carens/photos/interior-4.webp",
+      ],
+    },
   },
   {
     category: "suv",
     categoryLabel: "SUV",
-    models: "Hycross",
+    models: "Innova Hycross",
     capacity: "6 passengers",
     bestFor: "Family trips, outstation, premium travel",
     image: "/images/fleet/suv-1.jpg",
+    photos: {
+      exterior: "/images/fleet/suv/hycross/photos/exterior.webp",
+      interior: [
+        "/images/fleet/suv/hycross/photos/interior-1.webp",
+        "/images/fleet/suv/hycross/photos/interior-2.webp",
+        "/images/fleet/suv/hycross/photos/interior-3.webp",
+        "/images/fleet/suv/hycross/photos/interior-4.webp",
+        "/images/fleet/suv/hycross/photos/interior-5.webp",
+        "/images/fleet/suv/hycross/photos/interior-6.webp",
+      ],
+    },
   },
   {
     category: "suv",
     categoryLabel: "SUV",
-    models: "Rumion",
+    models: "Toyota Rumion",
     capacity: "6 passengers",
     bestFor: "City rides, family trips, outstation",
     image: "/images/fleet/suv-2.jpg",
+    photos: {
+      exterior: "/images/fleet/suv/rumion/photos/exterior.webp",
+      interior: [
+        "/images/fleet/suv/rumion/photos/interior-1.webp",
+        "/images/fleet/suv/rumion/photos/interior-2.webp",
+        "/images/fleet/suv/rumion/photos/interior-3.webp",
+        "/images/fleet/suv/rumion/photos/interior-4.webp",
+        "/images/fleet/suv/rumion/photos/interior-5.webp",
+      ],
+    },
   },
   // Premium
   {
@@ -127,6 +166,14 @@ const vehicles: Vehicle[] = [
     capacity: "4 passengers",
     bestFor: "VIP travel, executive travel, special occasions",
     image: "/images/fleet/premium-2.jpg",
+    photos: {
+      exterior: "/images/fleet/premium/bmw-5-series/photos/exterior.webp",
+      interior: [
+        "/images/fleet/premium/bmw-5-series/photos/interior-1.webp",
+        "/images/fleet/premium/bmw-5-series/photos/interior-2.webp",
+        "/images/fleet/premium/bmw-5-series/photos/interior-3.webp",
+      ],
+    },
   },
   {
     category: "premium",
@@ -156,7 +203,7 @@ const vehicles: Vehicle[] = [
   {
     category: "tempo",
     categoryLabel: "TEMPO TRAVELLER",
-    models: "Force Urban",
+    models: "Force Urbania",
     capacity: "12–16 passengers",
     bestFor: "Group tours, pilgrimages, events",
     image: "/images/fleet/tempo-1.jpg",

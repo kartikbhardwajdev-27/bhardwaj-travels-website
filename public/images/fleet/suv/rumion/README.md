@@ -1,1 +1,1 @@
-# Rumion — drop exterior and interior photos into /photos
+# Toyota Rumion — drop exterior and interior photos into /photos
