@@ -14,41 +14,62 @@ export const metadata = {
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["LocalBusiness", "TaxiService"],
+            "name": "Bhardwaj Travels",
+            "description": "Reliable taxi and cab service across North India. Outstation trips, airport transfers, wedding fleet, corporate rentals and tour packages from Zirakpur, Chandigarh.",
+            "url": "https://www.bhardwajtravels1.com",
+            "telephone": "+919417566648",
+            "email": "bhardwajtravels999@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Victoria City",
+              "addressLocality": "Zirakpur",
+              "addressRegion": "Punjab",
+              "postalCode": "140603",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 30.6519,
+              "longitude": 76.8011
+            },
+            "areaServed": [
+              "Zirakpur", "Chandigarh", "Mohali", "Panchkula", "North India"
+            ],
+            "serviceType": [
+              "Local City Taxi",
+              "Outstation Cab",
+              "Airport Transfer",
+              "Wedding Fleet",
+              "Corporate Rental",
+              "Tour Packages"
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+              "opens": "00:00",
+              "closes": "23:59"
+            },
+            "priceRange": "₹₹",
+            "currenciesAccepted": "INR",
+            "paymentAccepted": "Cash, UPI, Bank Transfer",
+            "logo": "https://www.bhardwajtravels1.com/logo.svg",
+            "image": "https://www.bhardwajtravels1.com/opengraph-image.jpg",
+            "sameAs": []
+          }),
+        }}
+      />
       <Hero />
       <ServicesGrid />
       <FleetHighlight />
       <PackagesHighlight />
       <WhyChooseUs />
       <CtaBanner />
-
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Bhardwaj Travels",
-            description:
-              "Reliable taxi and travel services across North India. Outstation, airport transfers, weddings, corporate rentals, and tour packages.",
-            url: "https://www.bhardwajtravels1.com",
-            telephone: "+919417566648",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Zirakpur",
-              addressRegion: "Punjab",
-              addressCountry: "IN",
-            },
-            areaServed: "North India",
-            priceRange: "$$",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.8",
-              reviewCount: "500",
-            },
-          }),
-        }}
-      />
     </>
   );
 }
