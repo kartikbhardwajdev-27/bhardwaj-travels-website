@@ -31,7 +31,7 @@ export default function Home() {
             name: "Bhardwaj Travels",
             description:
               "Reliable taxi and travel services across North India. Outstation, airport transfers, weddings, corporate rentals, and tour packages.",
-            url: "https://bhardwajtravels.com",
+            url: "https://www.bhardwajtravels1.com",
             telephone: "+919417566648",
             address: {
               "@type": "PostalAddress",

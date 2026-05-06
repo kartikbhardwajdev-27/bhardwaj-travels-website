@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://bhardwajtravels.com',
+    url: 'https://www.bhardwajtravels1.com',
     siteName: 'Bhardwaj Travels',
     title: 'Bhardwaj Travels – Taxi & Cab Service in North India',
     description: 'Reliable taxi services across North India. Outstation, airport, weddings, corporate travel from Zirakpur & Chandigarh.',
