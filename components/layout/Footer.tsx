@@ -132,7 +132,9 @@ export default function Footer() {
               Facebook
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/bhardwaj.travels1/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white/40 text-sm hover:text-primary transition-colors"
               aria-label="Instagram"
             >
