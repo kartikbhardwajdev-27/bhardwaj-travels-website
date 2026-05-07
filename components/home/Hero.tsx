@@ -49,9 +49,9 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={{ y: 30 }}
+          animate={{ y: 0 }}
+          transition={{ duration: 0.6 }}
           className="text-white/70 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
         >
           Outstation, airport, weddings, corporate — Bhardwaj Travels delivers
