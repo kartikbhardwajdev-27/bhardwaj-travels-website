@@ -119,14 +119,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">
+          <p className="text-white/70 text-sm">
             &copy; {new Date().getFullYear()} Bhardwaj Travels. All rights
             reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="#"
-              className="text-white/40 text-sm hover:text-primary transition-colors"
+              className="text-white/70 text-sm hover:text-primary transition-colors"
               aria-label="Facebook"
             >
               Facebook
@@ -135,14 +135,14 @@ export default function Footer() {
               href="https://www.instagram.com/bhardwaj.travels1/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/40 text-sm hover:text-primary transition-colors"
+              className="text-white/70 text-sm hover:text-primary transition-colors"
               aria-label="Instagram"
             >
               Instagram
             </a>
             <a
               href="#"
-              className="text-white/40 text-sm hover:text-primary transition-colors"
+              className="text-white/70 text-sm hover:text-primary transition-colors"
               aria-label="Twitter"
             >
               Twitter
