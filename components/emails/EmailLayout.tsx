@@ -35,7 +35,11 @@ export default function EmailLayout({ children }: EmailLayoutProps) {
           <Text style={footerText}>
             Phone: +91 94175 66648 | Email: bhardwajtravels999@gmail.com
           </Text>
-          <Text style={footerText}>Victoria City, Zirakpur, Mohali, Punjab - 140603</Text>
+          <Text style={footerText}>
+            <a href="https://maps.app.goo.gl/dLb2n93xEZT8C8TY8" target="_blank" rel="noopener noreferrer" style={{ color: "#5C5C56" }}>
+              218-O, Victoria City, Bhabat, Zirakpur, SAS Nagar (Mohali), Punjab - 140603
+            </a>
+          </Text>
         </Section>
       </Body>
     </Html>

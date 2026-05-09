@@ -108,10 +108,15 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-white/60 text-sm">
+                <a
+                  href="https://maps.app.goo.gl/dLb2n93xEZT8C8TY8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-white/60 text-sm hover:text-primary transition-colors"
+                >
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                  <span>Victoria City, Zirakpur, Mohali, Punjab - 140603</span>
-                </div>
+                  <span>218-O, Victoria City, Bhabat, Zirakpur, SAS Nagar (Mohali), Punjab - 140603</span>
+                </a>
               </li>
             </ul>
           </div>
