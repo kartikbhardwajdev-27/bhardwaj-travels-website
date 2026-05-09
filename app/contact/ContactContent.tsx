@@ -14,6 +14,8 @@ const contactInfo = [
     value: "+91 94175 66648",
     href: "tel:+919417566648",
     subtitle: "Available 24/7",
+    target: undefined,
+    rel: undefined,
   },
   {
     icon: Mail,
@@ -21,13 +23,17 @@ const contactInfo = [
     value: "bhardwajtravels999@gmail.com",
     href: "mailto:bhardwajtravels999@gmail.com",
     subtitle: "We reply within 2 hours",
+    target: undefined,
+    rel: undefined,
   },
   {
     icon: MapPin,
     title: "Visit us",
-    value: "Victoria City, Zirakpur, Mohali, Punjab - 140603",
-    href: "#map",
+    value: "218-O, Victoria City, Bhabat, Zirakpur, SAS Nagar (Mohali), Punjab - 140603",
+    href: "https://maps.app.goo.gl/dLb2n93xEZT8C8TY8",
     subtitle: "Zirakpur, Punjab, India",
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];
 
@@ -122,6 +128,8 @@ export default function ContactContent() {
             <motion.a
               key={info.title}
               href={info.href}
+              target={info.target}
+              rel={info.rel}
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
@@ -144,9 +152,9 @@ export default function ContactContent() {
 
       {/* Map */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="map">
-        <div className="rounded-2xl overflow-hidden border border-soft-gray h-80">
+        <div className="rounded-2xl overflow-hidden border border-soft-gray h-80 relative">
           <iframe
-            src="https://maps.google.com/maps?q=30.651900412933028,76.80110464974004&z=15&output=embed"
+            src="https://maps.google.com/maps?q=30.651262549534998,76.8008999390526&z=15&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
@@ -154,6 +162,13 @@ export default function ContactContent() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Bhardwaj Travels Office Location"
+          />
+          <a
+            href="https://maps.app.goo.gl/dLb2n93xEZT8C8TY8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0"
+            aria-label="View on Google Maps"
           />
         </div>
       </div>
